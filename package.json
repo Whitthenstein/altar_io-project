@@ -1,0 +1,16 @@
+{
+  "name": "ts-node-react-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm run local --prefix server",
+    "client": "npm run local --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
