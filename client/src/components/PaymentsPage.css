@@ -1,0 +1,23 @@
+.payments_table {
+  display: grid;
+  width: 800px;
+}
+
+.payments_row {
+  /* border: 1px solid white; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+
+.table_cell {
+  border: 1px solid white;
+  margin: 0;
+  padding: 0.5rem;
+
+  text-align: left;
+  justify-content: left;
+}
