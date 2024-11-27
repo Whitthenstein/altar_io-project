@@ -26,7 +26,11 @@ const PaymentsPage = () => {
   }, [paymentName, paymentAmount]);
 
   useEffect(() => {
-    if (socket) {
+    if (
+      socket &&
+      !socket.hasListeners("new-payment") &&
+      !socket.hasListeners("all-payments")
+    ) {
       socket.on("new-payment", (payment: PaymentType) => {
         addPayment(payment);
       });

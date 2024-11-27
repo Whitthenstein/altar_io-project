@@ -70,7 +70,7 @@ io.on("connection", (socket) => {
       code: generator.currentCode,
       grid: generator.currentGrid,
     };
-    socket.emit("new-payment", payment);
+    io.emit("new-payment", payment);
     db.addPayment(payment);
   });
 
